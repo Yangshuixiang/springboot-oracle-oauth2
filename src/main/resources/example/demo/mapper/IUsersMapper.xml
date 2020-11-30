@@ -7,13 +7,13 @@
     <!-- 查询数据 -->
     <!-- 入参定义：在接口定义中使用@Param注解(单参/多参都可使用) -->
     <!-- 语句末尾不能有分号：ORA-00911: invalid character -->
-    <select id="findByClientId" resultType="example.demo.entity.Users">
+    <select id="findByUsernameAndPassword" resultType="example.demo.entity.Users">
         SELECT u.id, u.username, u.password FROM users u WHERE 1=1
         <if test="username != null">
-            and t.username = #{username}
+            and u.username = #{username}
         </if>
         <if test="password != null">
-            and t.password = #{password}
+            and u.password = #{password}
         </if>
         order by u.id
     </select>
