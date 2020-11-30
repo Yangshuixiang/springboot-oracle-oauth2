@@ -1,6 +1,5 @@
 package example.demo;
 
-import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -11,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
-//@MapperScan("example.demo.mapper")类已申明@Mapper
+//@MapperScan("example.demo.mapper")//类已申明@Mapper
 public class OracleApplication {
 
     public static void main(String[] args) {

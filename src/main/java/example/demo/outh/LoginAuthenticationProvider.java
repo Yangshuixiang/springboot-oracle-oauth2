@@ -25,7 +25,7 @@ import java.util.Arrays;
 public class LoginAuthenticationProvider implements AuthenticationProvider {
 
     @Resource
-    private IUsersMapper usersRepository;
+    IUsersMapper usersRepository;
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {

@@ -1,22 +1,9 @@
 package example.demo.conf;
 
-import com.baomidou.mybatisplus.autoconfigure.SpringBootVFS;
-import com.baomidou.mybatisplus.core.MybatisConfiguration;
-import com.baomidou.mybatisplus.core.MybatisXMLLanguageDriver;
 import com.baomidou.mybatisplus.extension.incrementer.OracleKeyGenerator;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
-import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
-import org.apache.ibatis.mapping.DatabaseIdProvider;
-import org.apache.ibatis.plugin.Interceptor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.DefaultResourceLoader;
-import org.springframework.core.io.ResourceLoader;
-import org.springframework.util.ObjectUtils;
-import org.springframework.util.StringUtils;
-
-import javax.sql.DataSource;
 
 /**
  * @Author: YangShuiXiang

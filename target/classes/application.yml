@@ -35,7 +35,7 @@ spring:
       maxLifetime: 1800000
       connectionTimeout: 30000
 #mybatis+配置
-  mybatis-plus:
+mybatis-plus:
   mapper-locations: classpath*:example/demo/mapper/*Mapper.xml
   type-aliases-package: example.demo.entity
   configuration:

@@ -2580,3 +2580,761 @@ Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (
 	... 65 common frames omitted
 2020-11-30 17:34:23 -Shutting down ExecutorService 'applicationTaskExecutor'
 2020-11-30 17:34:23 -Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-11-30 19:06:42 -Starting OracleApplication on shuixiangyang with PID 18084 (D:\Demo\springboot-oracle\target\classes started by shuixiang.yang in D:\Demo\springboot-oracle)
+2020-11-30 19:06:42 -Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-11-30 19:06:42 -No active profile set, falling back to default profiles: default
+2020-11-30 19:06:43 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-30 19:06:43 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-30 19:06:43 -Finished Spring Data repository scanning in 23ms. Found 0 repository interfaces.
+2020-11-30 19:06:44 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5dd9a808] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-30 19:06:44 -UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-30 19:06:44 -Initializing Spring embedded WebApplicationContext
+2020-11-30 19:06:44 -Root WebApplicationContext: initialization completed in 2430 ms
+2020-11-30 19:06:47 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:06:48 -Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71e7c13f, org.springframework.security.web.context.SecurityContextPersistenceFilter@67e4928c, org.springframework.security.web.header.HeaderWriterFilter@6acb45c1, org.springframework.security.web.authentication.logout.LogoutFilter@50f05307, org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter@d6d683e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@520c3dcb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@72e75786, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@35a9e665, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2295566b, org.springframework.security.web.session.SessionManagementFilter@30bbe83, org.springframework.security.web.access.ExceptionTranslationFilter@41bd6a0f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56f72909]
+2020-11-30 19:06:48 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1b8ee69d, org.springframework.security.web.context.SecurityContextPersistenceFilter@570ed9c, org.springframework.security.web.header.HeaderWriterFilter@74a5bef0, org.springframework.security.web.csrf.CsrfFilter@5896b9f5, org.springframework.security.web.authentication.logout.LogoutFilter@1fe05fff, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@ad5cffa, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1dfe5dd1, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@2b400bd0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@237aa0c7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@93f15f6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5034681f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@fceab5d, org.springframework.security.web.session.SessionManagementFilter@68c4a860, org.springframework.security.web.access.ExceptionTranslationFilter@4ad8d36f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6ffbf0ac]
+2020-11-30 19:06:48 -XNIO version 3.3.8.Final
+2020-11-30 19:06:48 -XNIO NIO Implementation Version 3.3.8.Final
+2020-11-30 19:06:48 -Undertow started on port(s) 9090 (http) with context path ''
+2020-11-30 19:06:48 -Started OracleApplication in 7.038 seconds (JVM running for 7.868)
+2020-11-30 19:06:55 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-30 19:06:55 -Initializing Servlet 'dispatcherServlet'
+2020-11-30 19:06:55 -Completed initialization in 9 ms
+2020-11-30 19:06:55 -An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: Invalid bound statement (not found): example.demo.mapper.IAppMapper.findByClientId
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter.attemptAuthentication(ClientCredentialsTokenEndpointFilter.java:123)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:360)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): example.demo.mapper.IAppMapper.findByClientId
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedMapperMethod$0(MybatisMapperProxy.java:101)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedMapperMethod(MybatisMapperProxy.java:100)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:95)
+	at com.sun.proxy.$Proxy64.findByClientId(Unknown Source)
+	at example.demo.conf.OAuthAuthorizationConfig.lambda$clientDetailsService$0(OAuthAuthorizationConfig.java:126)
+	at org.springframework.security.oauth2.provider.client.ClientDetailsUserDetailsService.loadUserByUsername(ClientDetailsUserDetailsService.java:47)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 65 common frames omitted
+2020-11-30 19:17:09 -Starting OracleApplication on shuixiangyang with PID 13092 (D:\Demo\springboot-oracle\target\classes started by shuixiang.yang in D:\Demo\springboot-oracle)
+2020-11-30 19:17:09 -Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-11-30 19:17:09 -No active profile set, falling back to default profiles: default
+2020-11-30 19:17:11 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-30 19:17:11 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-30 19:17:11 -Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2020-11-30 19:17:11 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9d9fa005] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-30 19:17:12 -UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-30 19:17:12 -Initializing Spring embedded WebApplicationContext
+2020-11-30 19:17:12 -Root WebApplicationContext: initialization completed in 2173 ms
+2020-11-30 19:17:14 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:17:15 -Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24435620, org.springframework.security.web.context.SecurityContextPersistenceFilter@196d684b, org.springframework.security.web.header.HeaderWriterFilter@312819ae, org.springframework.security.web.authentication.logout.LogoutFilter@4bca8eaf, org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter@4bb9f7d4, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@12a0d249, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1f3f434, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77e730bd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4c02899, org.springframework.security.web.session.SessionManagementFilter@1cab19e2, org.springframework.security.web.access.ExceptionTranslationFilter@72e49f6a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@cef885d]
+2020-11-30 19:17:15 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c5ac0, org.springframework.security.web.context.SecurityContextPersistenceFilter@575d48db, org.springframework.security.web.header.HeaderWriterFilter@51468039, org.springframework.security.web.csrf.CsrfFilter@6be422da, org.springframework.security.web.authentication.logout.LogoutFilter@74badf19, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4efe014f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@499c4d61, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@23d978b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@22ff11ef, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1b36d248, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e94de5f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3cf70afa, org.springframework.security.web.session.SessionManagementFilter@1d654b5f, org.springframework.security.web.access.ExceptionTranslationFilter@225ddf5f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@8315e4a]
+2020-11-30 19:17:15 -XNIO version 3.3.8.Final
+2020-11-30 19:17:15 -XNIO NIO Implementation Version 3.3.8.Final
+2020-11-30 19:17:15 -Undertow started on port(s) 9090 (http) with context path ''
+2020-11-30 19:17:15 -Started OracleApplication in 6.845 seconds (JVM running for 7.675)
+2020-11-30 19:17:22 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-30 19:17:22 -Initializing Servlet 'dispatcherServlet'
+2020-11-30 19:17:22 -Completed initialization in 10 ms
+2020-11-30 19:17:22 -An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: Invalid bound statement (not found): example.demo.mapper.IAppMapper.findByClientId
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter.attemptAuthentication(ClientCredentialsTokenEndpointFilter.java:123)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:360)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): example.demo.mapper.IAppMapper.findByClientId
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedMapperMethod$0(MybatisMapperProxy.java:101)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedMapperMethod(MybatisMapperProxy.java:100)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:95)
+	at com.sun.proxy.$Proxy64.findByClientId(Unknown Source)
+	at example.demo.conf.OAuthAuthorizationConfig.lambda$clientDetailsService$0(OAuthAuthorizationConfig.java:126)
+	at org.springframework.security.oauth2.provider.client.ClientDetailsUserDetailsService.loadUserByUsername(ClientDetailsUserDetailsService.java:47)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 65 common frames omitted
+2020-11-30 19:24:56 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:24:56 -Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-11-30 19:25:01 -Starting OracleApplication on shuixiangyang with PID 8688 (D:\Demo\springboot-oracle\target\classes started by shuixiang.yang in D:\Demo\springboot-oracle)
+2020-11-30 19:25:01 -Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-11-30 19:25:01 -No active profile set, falling back to default profiles: default
+2020-11-30 19:25:02 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-30 19:25:02 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-30 19:25:02 -Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2020-11-30 19:25:03 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9980bbf5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-30 19:25:03 -UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-30 19:25:03 -Initializing Spring embedded WebApplicationContext
+2020-11-30 19:25:03 -Root WebApplicationContext: initialization completed in 2192 ms
+2020-11-30 19:25:05 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:25:06 -Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6de5ad56, org.springframework.security.web.context.SecurityContextPersistenceFilter@7a274521, org.springframework.security.web.header.HeaderWriterFilter@335cdd2, org.springframework.security.web.authentication.logout.LogoutFilter@72ec16f8, org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter@6879e983, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5e360c3b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@35841d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d8dbf10, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3155f190, org.springframework.security.web.session.SessionManagementFilter@60a99f3d, org.springframework.security.web.access.ExceptionTranslationFilter@4b56b517, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6585df70]
+2020-11-30 19:25:06 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16e4db59, org.springframework.security.web.context.SecurityContextPersistenceFilter@50e1f3fc, org.springframework.security.web.header.HeaderWriterFilter@543ac221, org.springframework.security.web.csrf.CsrfFilter@3a69014e, org.springframework.security.web.authentication.logout.LogoutFilter@2c02a007, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6f4fc83f, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@7323c38c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@33fec21, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@66b90ab3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@54737322, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56da8847, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@12a0d249, org.springframework.security.web.session.SessionManagementFilter@2270f58d, org.springframework.security.web.access.ExceptionTranslationFilter@27746c5e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@35d4035f]
+2020-11-30 19:25:07 -XNIO version 3.3.8.Final
+2020-11-30 19:25:07 -XNIO NIO Implementation Version 3.3.8.Final
+2020-11-30 19:25:07 -Undertow started on port(s) 9090 (http) with context path ''
+2020-11-30 19:25:07 -Started OracleApplication in 6.88 seconds (JVM running for 7.696)
+2020-11-30 19:25:11 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-30 19:25:11 -Initializing Servlet 'dispatcherServlet'
+2020-11-30 19:25:11 -Completed initialization in 11 ms
+2020-11-30 19:25:11 -An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: Invalid bound statement (not found): example.demo.mapper.IAppMapper.findByClientId
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter.attemptAuthentication(ClientCredentialsTokenEndpointFilter.java:123)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:360)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): example.demo.mapper.IAppMapper.findByClientId
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedMapperMethod$0(MybatisMapperProxy.java:101)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedMapperMethod(MybatisMapperProxy.java:100)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:95)
+	at com.sun.proxy.$Proxy64.findByClientId(Unknown Source)
+	at example.demo.conf.OAuthAuthorizationConfig.lambda$clientDetailsService$0(OAuthAuthorizationConfig.java:126)
+	at org.springframework.security.oauth2.provider.client.ClientDetailsUserDetailsService.loadUserByUsername(ClientDetailsUserDetailsService.java:47)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 65 common frames omitted
+2020-11-30 19:25:25 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:25:25 -Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-11-30 19:26:33 -Starting OracleApplication on shuixiangyang with PID 21148 (D:\Demo\springboot-oracle\target\classes started by shuixiang.yang in D:\Demo\springboot-oracle)
+2020-11-30 19:26:33 -Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-11-30 19:26:33 -No active profile set, falling back to default profiles: default
+2020-11-30 19:26:34 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-30 19:26:34 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-30 19:26:34 -Finished Spring Data repository scanning in 27ms. Found 0 repository interfaces.
+2020-11-30 19:26:35 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c90e03ec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-30 19:26:35 -UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-30 19:26:35 -Initializing Spring embedded WebApplicationContext
+2020-11-30 19:26:35 -Root WebApplicationContext: initialization completed in 2560 ms
+2020-11-30 19:26:38 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:26:39 -Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6297cb4b, org.springframework.security.web.context.SecurityContextPersistenceFilter@7981963f, org.springframework.security.web.header.HeaderWriterFilter@79273a4f, org.springframework.security.web.authentication.logout.LogoutFilter@38923cfe, org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter@249a45fd, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@76ed7573, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@b4d83ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76b642aa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65d6640, org.springframework.security.web.session.SessionManagementFilter@50bb1c1f, org.springframework.security.web.access.ExceptionTranslationFilter@9f2fe2e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@521c67f0]
+2020-11-30 19:26:39 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6dde1bf5, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ab86b2a, org.springframework.security.web.header.HeaderWriterFilter@11c999da, org.springframework.security.web.csrf.CsrfFilter@1e000a17, org.springframework.security.web.authentication.logout.LogoutFilter@432f4626, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4b22214d, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@4ac7856f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4b56b517, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@498b611e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7793b55d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2ac9e53c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1124dd79, org.springframework.security.web.session.SessionManagementFilter@54f69311, org.springframework.security.web.access.ExceptionTranslationFilter@77d959f1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3c4ad54]
+2020-11-30 19:26:39 -XNIO version 3.3.8.Final
+2020-11-30 19:26:39 -XNIO NIO Implementation Version 3.3.8.Final
+2020-11-30 19:26:39 -Undertow started on port(s) 9090 (http) with context path ''
+2020-11-30 19:26:39 -Started OracleApplication in 7.635 seconds (JVM running for 8.776)
+2020-11-30 19:26:44 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-30 19:26:44 -Initializing Servlet 'dispatcherServlet'
+2020-11-30 19:26:44 -Completed initialization in 13 ms
+2020-11-30 19:26:44 -An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: Invalid bound statement (not found): example.demo.mapper.IAppMapper.findByClientId
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter.attemptAuthentication(ClientCredentialsTokenEndpointFilter.java:123)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:360)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): example.demo.mapper.IAppMapper.findByClientId
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedMapperMethod$0(MybatisMapperProxy.java:101)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedMapperMethod(MybatisMapperProxy.java:100)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:95)
+	at com.sun.proxy.$Proxy64.findByClientId(Unknown Source)
+	at example.demo.conf.OAuthAuthorizationConfig.lambda$clientDetailsService$0(OAuthAuthorizationConfig.java:126)
+	at org.springframework.security.oauth2.provider.client.ClientDetailsUserDetailsService.loadUserByUsername(ClientDetailsUserDetailsService.java:47)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 65 common frames omitted
+2020-11-30 19:27:08 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:27:08 -Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-11-30 19:27:27 -Starting OracleApplication on shuixiangyang with PID 21412 (D:\Demo\springboot-oracle\target\classes started by shuixiang.yang in D:\Demo\springboot-oracle)
+2020-11-30 19:27:27 -Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-11-30 19:27:27 -No active profile set, falling back to default profiles: default
+2020-11-30 19:27:29 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-30 19:27:29 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-30 19:27:29 -Finished Spring Data repository scanning in 38ms. Found 0 repository interfaces.
+2020-11-30 19:27:29 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7fe4809a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-30 19:27:30 -UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-30 19:27:30 -Initializing Spring embedded WebApplicationContext
+2020-11-30 19:27:30 -Root WebApplicationContext: initialization completed in 2360 ms
+2020-11-30 19:27:32 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:27:33 -Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65b2ee36, org.springframework.security.web.context.SecurityContextPersistenceFilter@12421766, org.springframework.security.web.header.HeaderWriterFilter@5600a278, org.springframework.security.web.authentication.logout.LogoutFilter@1ab268bd, org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter@2b62475a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2d4a0671, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@731e0bff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@628bd77e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28e91f6d, org.springframework.security.web.session.SessionManagementFilter@77d54a41, org.springframework.security.web.access.ExceptionTranslationFilter@1e57b783, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@321c2a7]
+2020-11-30 19:27:33 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@574218f, org.springframework.security.web.context.SecurityContextPersistenceFilter@41ec4271, org.springframework.security.web.header.HeaderWriterFilter@4f2544b0, org.springframework.security.web.csrf.CsrfFilter@26679788, org.springframework.security.web.authentication.logout.LogoutFilter@7252bdb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7b64bbad, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@24f90aff, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@735988cf, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@71eff6a3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@70aa58e1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@154f8280, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d3eecda, org.springframework.security.web.session.SessionManagementFilter@5bad555b, org.springframework.security.web.access.ExceptionTranslationFilter@5cdda548, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@ecf028c]
+2020-11-30 19:27:33 -XNIO version 3.3.8.Final
+2020-11-30 19:27:33 -XNIO NIO Implementation Version 3.3.8.Final
+2020-11-30 19:27:33 -Undertow started on port(s) 9090 (http) with context path ''
+2020-11-30 19:27:33 -Started OracleApplication in 7.003 seconds (JVM running for 7.778)
+2020-11-30 19:27:45 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-30 19:27:45 -Initializing Servlet 'dispatcherServlet'
+2020-11-30 19:27:45 -Completed initialization in 10 ms
+2020-11-30 19:27:45 -An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: Invalid bound statement (not found): example.demo.mapper.IAppMapper.findByClientId
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter.attemptAuthentication(ClientCredentialsTokenEndpointFilter.java:123)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:360)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): example.demo.mapper.IAppMapper.findByClientId
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedMapperMethod$0(MybatisMapperProxy.java:101)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedMapperMethod(MybatisMapperProxy.java:100)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:95)
+	at com.sun.proxy.$Proxy65.findByClientId(Unknown Source)
+	at example.demo.conf.OAuthAuthorizationConfig.lambda$clientDetailsService$0(OAuthAuthorizationConfig.java:126)
+	at org.springframework.security.oauth2.provider.client.ClientDetailsUserDetailsService.loadUserByUsername(ClientDetailsUserDetailsService.java:47)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 65 common frames omitted
+2020-11-30 19:28:12 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:28:12 -Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-11-30 19:31:22 -Starting OracleApplication on shuixiangyang with PID 3252 (D:\Demo\springboot-oracle\target\classes started by shuixiang.yang in D:\Demo\springboot-oracle)
+2020-11-30 19:31:22 -Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-11-30 19:31:22 -No active profile set, falling back to default profiles: default
+2020-11-30 19:31:23 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-30 19:31:23 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-30 19:31:23 -Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2020-11-30 19:31:24 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5fb1384e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-30 19:31:24 -UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-30 19:31:25 -Initializing Spring embedded WebApplicationContext
+2020-11-30 19:31:25 -Root WebApplicationContext: initialization completed in 2427 ms
+2020-11-30 19:31:27 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:31:28 -Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@408d945b, org.springframework.security.web.context.SecurityContextPersistenceFilter@54f25b42, org.springframework.security.web.header.HeaderWriterFilter@46d69ca4, org.springframework.security.web.authentication.logout.LogoutFilter@1dc9f5ad, org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter@297c3a43, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@33f2eb04, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d156f8f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7c0b0bd9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15ad5acb, org.springframework.security.web.session.SessionManagementFilter@3c826498, org.springframework.security.web.access.ExceptionTranslationFilter@6fcc0a1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4bca8eaf]
+2020-11-30 19:31:28 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2aa811f9, org.springframework.security.web.context.SecurityContextPersistenceFilter@4e3ee457, org.springframework.security.web.header.HeaderWriterFilter@12532e37, org.springframework.security.web.csrf.CsrfFilter@646d58cd, org.springframework.security.web.authentication.logout.LogoutFilter@2d2a8819, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@48da64f2, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@148fca83, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@66abb2fa, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@60b553f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41b66d1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fb2c2f3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7d4da729, org.springframework.security.web.session.SessionManagementFilter@401b67a9, org.springframework.security.web.access.ExceptionTranslationFilter@388e4c25, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7846913f]
+2020-11-30 19:31:28 -XNIO version 3.3.8.Final
+2020-11-30 19:31:28 -XNIO NIO Implementation Version 3.3.8.Final
+2020-11-30 19:31:28 -Undertow started on port(s) 9090 (http) with context path ''
+2020-11-30 19:31:28 -Started OracleApplication in 7.591 seconds (JVM running for 8.62)
+2020-11-30 19:32:58 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:33:22 -Starting OracleApplication on shuixiangyang with PID 18884 (D:\Demo\springboot-oracle\target\classes started by shuixiang.yang in D:\Demo\springboot-oracle)
+2020-11-30 19:33:22 -Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-11-30 19:33:22 -No active profile set, falling back to default profiles: default
+2020-11-30 19:33:23 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-30 19:33:23 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-30 19:33:23 -Finished Spring Data repository scanning in 23ms. Found 0 repository interfaces.
+2020-11-30 19:33:24 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a560ff71] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-30 19:33:24 -UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-30 19:33:24 -Initializing Spring embedded WebApplicationContext
+2020-11-30 19:33:24 -Root WebApplicationContext: initialization completed in 2411 ms
+2020-11-30 19:33:27 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:33:28 -Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7286827b, org.springframework.security.web.context.SecurityContextPersistenceFilter@b56c222, org.springframework.security.web.header.HeaderWriterFilter@5e681097, org.springframework.security.web.authentication.logout.LogoutFilter@1b632442, org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter@3d3b272a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@621392ea, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4df7b4ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67e4928c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1dd64243, org.springframework.security.web.session.SessionManagementFilter@1d2c253, org.springframework.security.web.access.ExceptionTranslationFilter@9d3a7a1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@397a10df]
+2020-11-30 19:33:28 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@93f15f6, org.springframework.security.web.context.SecurityContextPersistenceFilter@6f655dbd, org.springframework.security.web.header.HeaderWriterFilter@5d0e703a, org.springframework.security.web.csrf.CsrfFilter@24068086, org.springframework.security.web.authentication.logout.LogoutFilter@7fb82f73, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@68c4a860, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@3a751535, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5034681f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@570ed9c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@546083d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7ac1b6c0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1dfe5dd1, org.springframework.security.web.session.SessionManagementFilter@7f77e065, org.springframework.security.web.access.ExceptionTranslationFilter@32513dea, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74a5bef0]
+2020-11-30 19:33:28 -XNIO version 3.3.8.Final
+2020-11-30 19:33:28 -XNIO NIO Implementation Version 3.3.8.Final
+2020-11-30 19:33:28 -Undertow started on port(s) 9090 (http) with context path ''
+2020-11-30 19:33:28 -Started OracleApplication in 7.196 seconds (JVM running for 8.1)
+2020-11-30 19:33:45 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-30 19:33:45 -Initializing Servlet 'dispatcherServlet'
+2020-11-30 19:33:45 -Completed initialization in 9 ms
+2020-11-30 19:33:45 -An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: Invalid bound statement (not found): example.demo.mapper.IAppMapper.findByClientId
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter.attemptAuthentication(ClientCredentialsTokenEndpointFilter.java:123)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:360)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): example.demo.mapper.IAppMapper.findByClientId
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedMapperMethod$0(MybatisMapperProxy.java:101)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedMapperMethod(MybatisMapperProxy.java:100)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:95)
+	at com.sun.proxy.$Proxy64.findByClientId(Unknown Source)
+	at example.demo.conf.OAuthAuthorizationConfig.lambda$clientDetailsService$0(OAuthAuthorizationConfig.java:126)
+	at org.springframework.security.oauth2.provider.client.ClientDetailsUserDetailsService.loadUserByUsername(ClientDetailsUserDetailsService.java:47)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 65 common frames omitted
+2020-11-30 19:34:14 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:34:14 -Destroying Spring FrameworkServlet 'dispatcherServlet'
+2020-11-30 19:51:35 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'clientDetailsService', defined in class path resource [example/demo/conf/OAuthAuthorizationConfig.class], could not be registered. A bean with that name has already been defined in BeanDefinition defined in class path resource [org/springframework/security/oauth2/config/annotation/configuration/ClientDetailsServiceConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2020-11-30 19:53:04 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'clientDetailsService', defined in class path resource [example/demo/conf/OAuthAuthorizationConfig.class], could not be registered. A bean with that name has already been defined in BeanDefinition defined in class path resource [org/springframework/security/oauth2/config/annotation/configuration/ClientDetailsServiceConfiguration.class] and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2020-11-30 19:55:05 -Starting OracleApplication on shuixiangyang with PID 16672 (D:\Demo\springboot-oracle\target\classes started by shuixiang.yang in D:\Demo\springboot-oracle)
+2020-11-30 19:55:05 -Running with Spring Boot v2.1.2.RELEASE, Spring v5.1.4.RELEASE
+2020-11-30 19:55:05 -No active profile set, falling back to default profiles: default
+2020-11-30 19:55:06 -Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-11-30 19:55:06 -Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-11-30 19:55:06 -Finished Spring Data repository scanning in 24ms. Found 0 repository interfaces.
+2020-11-30 19:55:07 -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$316e73ab] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-11-30 19:55:07 -UT026010: Buffer pool was not set on WebSocketDeploymentInfo, the default pool will be used
+2020-11-30 19:55:07 -Initializing Spring embedded WebApplicationContext
+2020-11-30 19:55:07 -Root WebApplicationContext: initialization completed in 2196 ms
+2020-11-30 19:55:10 -Initializing ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:55:11 -Creating filter chain: OrRequestMatcher [requestMatchers=[Ant [pattern='/oauth/token'], Ant [pattern='/oauth/token_key'], Ant [pattern='/oauth/check_token']]], [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ecf028c, org.springframework.security.web.context.SecurityContextPersistenceFilter@3815a7d1, org.springframework.security.web.header.HeaderWriterFilter@2fafa7b5, org.springframework.security.web.authentication.logout.LogoutFilter@32caae19, org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter@799971ac, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@70aa58e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1d2d4d7a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6487f7f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7b64bbad, org.springframework.security.web.session.SessionManagementFilter@632b5c79, org.springframework.security.web.access.ExceptionTranslationFilter@fbe8fd3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@56f84c9b]
+2020-11-30 19:55:11 -Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@35d88a54, org.springframework.security.web.context.SecurityContextPersistenceFilter@56402642, org.springframework.security.web.header.HeaderWriterFilter@1a4cbcc6, org.springframework.security.web.csrf.CsrfFilter@a240452, org.springframework.security.web.authentication.logout.LogoutFilter@5358c8fa, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@752494dd, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@47d9c01, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6c1bebca, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2986427e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@620572db, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d5048d1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d4818e8, org.springframework.security.web.session.SessionManagementFilter@7cecab19, org.springframework.security.web.access.ExceptionTranslationFilter@460e5ffe, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@78743dd8]
+2020-11-30 19:55:11 -XNIO version 3.3.8.Final
+2020-11-30 19:55:11 -XNIO NIO Implementation Version 3.3.8.Final
+2020-11-30 19:55:11 -Undertow started on port(s) 9090 (http) with context path ''
+2020-11-30 19:55:11 -Started OracleApplication in 6.952 seconds (JVM running for 7.815)
+2020-11-30 19:55:24 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-11-30 19:55:24 -Initializing Servlet 'dispatcherServlet'
+2020-11-30 19:55:24 -Completed initialization in 9 ms
+2020-11-30 19:55:24 -An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: Invalid bound statement (not found): example.demo.mapper.IAppMapper.findByClientId
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter.attemptAuthentication(ClientCredentialsTokenEndpointFilter.java:123)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:292)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:138)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:135)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:272)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:81)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:104)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:360)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): example.demo.mapper.IAppMapper.findByClientId
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.<init>(MybatisMapperMethod.java:50)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.lambda$cachedMapperMethod$0(MybatisMapperProxy.java:101)
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1660)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.cachedMapperMethod(MybatisMapperProxy.java:100)
+	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:95)
+	at com.sun.proxy.$Proxy64.findByClientId(Unknown Source)
+	at example.demo.conf.OAuthAuthorizationConfig.lambda$clientDetailsService$0(OAuthAuthorizationConfig.java:126)
+	at org.springframework.security.oauth2.provider.client.ClientDetailsUserDetailsService.loadUserByUsername(ClientDetailsUserDetailsService.java:47)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 65 common frames omitted
+2020-11-30 19:58:07 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-30 19:58:07 -Destroying Spring FrameworkServlet 'dispatcherServlet'
