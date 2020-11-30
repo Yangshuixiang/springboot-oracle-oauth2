@@ -3781,3 +3781,7 @@ Caused by: oracle.jdbc.OracleDatabaseException: ORA-00904: "T"."PASSWORD": æ ‡è¯
 2020-11-30 20:15:49 -<==      Total: 1
 2020-11-30 20:15:50 -Starting without optional epoll library
 2020-11-30 20:15:50 -Starting without optional kqueue library
+2020-11-30 20:25:14 -Shutting down ExecutorService 'applicationTaskExecutor'
+2020-11-30 20:25:15 -MasterDatabookHikariCP - Shutdown initiated...
+2020-11-30 20:25:15 -MasterDatabookHikariCP - Shutdown completed.
+2020-11-30 20:25:15 -Destroying Spring FrameworkServlet 'dispatcherServlet'
