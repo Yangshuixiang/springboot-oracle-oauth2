@@ -17,5 +17,13 @@ import lombok.experimental.Accessors;
 @EqualsAndHashCode(callSuper = false)
 public class StudentDTO {
 
+    private String userId;
+    private String name;
+    private String nickName;
+    private Integer classId;
+    private String mark;
+    private String guardian;
+    private int offset;
+    private int limit;
 
 }

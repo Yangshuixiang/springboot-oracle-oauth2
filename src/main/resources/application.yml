@@ -1,13 +1,11 @@
 server:
-  port: 9090
+  port: 8090
 ---
 spring:
   application:
     name: springboot-oracle
   main:
     allow-bean-definition-overriding: true
----
-spring:
   redis:
     host: localhost
     port: 6379
@@ -21,8 +19,8 @@ spring:
         maxWait: -1
   datasource:
     driverClassName: oracle.jdbc.OracleDriver
-    #url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2B8
     url: jdbc:oracle:thin:@localhost:1521:orcl
+    #url: jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2B8
     username: yang
     password: 123456
     type: com.zaxxer.hikari.HikariDataSource
@@ -34,6 +32,18 @@ spring:
       poolName: MasterDatabookHikariCP
       maxLifetime: 1800000
       connectionTimeout: 30000
+  thymeleaf:
+    #默认开启Thymeleaf 的缓存，开发环境需要关闭，不然在开发过程中修改页面不会立刻生效需要重启
+    cache: false
+    #json 时间戳统一转换
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  # 设置静态文件路径，js,css等
+  mvc:
+    static-path-pattern: /**
+  resource:
+    static-locations: classpath:/static/,classpath:/public/,classpath:templates
 #mybatis+配置
 mybatis-plus:
   mapper-locations: classpath*:example/demo/mapper/*Mapper.xml
@@ -52,14 +62,3 @@ logging:
     root: info
     example:
       demo: debug
----
-#spring:
-  thymeleaf:
-    servlet:
-      contentType: text/html; charset=utf-8
-    cache: false
-    mode: LEGACYHTML5
-    encoding: UTF-8
-    enabled: true
-    prefix: classpath:/pages/
-    suffix: .html

@@ -2,6 +2,9 @@ package example.demo.utils;
 
 public interface Constant {
 
+    int DEFAULT_NUM = 1;
+    int DEFAULT_SIZE = 15;
+
     enum MyJsonReturnCode {
 
         PARAM_TYPE_ERROR("400", "请求参数类型错误"),
@@ -40,6 +43,41 @@ public interface Constant {
 
         public void setDesc(String desc) {
             this.desc = desc;
+        }
+    }
+
+    enum ResultStatusCode {
+        OK(0, "OK"),
+        BAD_REQUEST(400, "参数解析失败"),
+        INVALID_TOKEN(401, "无效的Access-Token"),
+        METHOD_NOT_ALLOWED(405, "不支持当前请求方法"),
+        SYSTEM_ERR(500, "服务器运行异常"),
+        PERMISSION_DENIED(10001, "权限不足"),
+        TOKEN_MISS(10002, "Token缺失");
+
+        private int code;
+
+        private String msg;
+
+        public int getCode() {
+            return code;
+        }
+
+        public void setCode(int code) {
+            this.code = code;
+        }
+
+        public String getMsg() {
+            return msg;
+        }
+
+        public void setMsg(String msg) {
+            this.msg = msg;
+        }
+
+        private ResultStatusCode(int code, String msg) {
+            this.code = code;
+            this.msg = msg;
         }
     }
 

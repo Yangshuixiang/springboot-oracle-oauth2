@@ -3,7 +3,7 @@ package example.demo.controller;
 
 import example.demo.entity.Employee;
 import example.demo.entity.JsonResult;
-import example.demo.service.IEmployeeService;
+import example.demo.service.EmployeeService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,7 @@ public class EmployeeController {
 
     private Logger logger = LoggerFactory.getLogger(EmployeeController.class);
     @Autowired
-    private IEmployeeService employeeService;
+    private EmployeeService employeeService;
 
     @RequestMapping("/getAll")
     @ResponseBody

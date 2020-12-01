@@ -2,24 +2,24 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="example.demo.mapper.IStudentMapper">
 
-    <!--<select id="queryByCondition" parameterType="map" resultType="map">
+    <!--<select id="queryStuByPage" parameterType="map" resultType="map">
         SELECT
-        td.d_num dNum,
-        td.device_model deviceModel,
-        td.register_time registerTime,
-        tdo.res,
-        tdo.dept_name deptName
-        FROM t_device td
-        LEFT JOIN t_device_org tdo ON td.org_id = tdo.id
+        s.name,
+        s.user_id,
+        s.nick_name,
+        c.class_name
+        FROM
+        student s
+        LEFT JOIN t_class c ON s.class_id = c.class_id
         <where>
-            <if test="search != null and search != '' ">
-                <bind name="search" value="'%'+search+'%'"/>
-                AND (td.d_num LIKE #{search}
-                OR td.mac LIKE #{search}
-                OR tdo.dept_name LIKE #{search})
+            <if test="s.name != null and s.name != '' ">
+                s.name like #{name}
+            </if>
+            <if test="s.class_id != null">
+                s.class_id = #{classId}
             </if>
         </where>
-        order by td.d_num
+        order by s.name
     </select>-->
 
     <!--设备详情-->
