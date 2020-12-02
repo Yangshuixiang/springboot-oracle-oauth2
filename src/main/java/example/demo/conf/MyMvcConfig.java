@@ -16,7 +16,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
 
     /**
      * 拦截某个请求跳转固定位置
-     *
+     * spring 5抛弃了WebMvcConfigurerAdapter  使用 WebMvcConfigurationSupport 代替了它
      * @param registry
      */
     @Override
