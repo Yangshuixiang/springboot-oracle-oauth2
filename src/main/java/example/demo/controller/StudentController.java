@@ -1,5 +1,6 @@
 package example.demo.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import example.demo.controller.dto.StudentDTO;
 import example.demo.entity.JsonResult;
 import example.demo.entity.Student;
@@ -52,9 +53,7 @@ public class StudentController {
 
     @PostMapping("/queryStuByPage")
     public JsonResult queryStuByPage(@RequestBody StudentDTO studentDTO){
-
-        List<Student> pageStu = studentService.queryStuByPage(studentDTO);
-
+        IPage<Student> pageStu = studentService.queryStuByPage(studentDTO);
         return JsonResult.success(pageStu);
     }
 }

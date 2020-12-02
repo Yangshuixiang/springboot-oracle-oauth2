@@ -49,7 +49,7 @@ public class StudentService extends ServiceImpl<IStudentMapper, Student> {
         }
     }
 
-    public List<Student> queryStuByPage(StudentDTO studentDTO) {
+    public IPage<Student> queryStuByPage(StudentDTO studentDTO) {
         //分页条件设置
         if (studentDTO.getOffset() < 1) {
             studentDTO.setOffset(Constant.DEFAULT_NUM);
@@ -75,6 +75,6 @@ public class StudentService extends ServiceImpl<IStudentMapper, Student> {
         }
         IPage<Student> pageResult = studentMapper.queryStuByPage(page, queryWrapper);
 
-        return null;
+        return pageResult;
     }
 }
