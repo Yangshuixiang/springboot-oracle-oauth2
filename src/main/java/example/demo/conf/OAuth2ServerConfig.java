@@ -15,6 +15,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
@@ -192,6 +193,21 @@ public class OAuth2ServerConfig {
         public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
             // 允许 /oauth/token的端点表单认证
             oauthServer.allowFormAuthenticationForClients()
+                    .allowFormAuthenticationForClients()
+                    .passwordEncoder(new PasswordEncoder() {
+                        @Override
+                        public String encode(CharSequence charSequence) {
+                            // 密码加密
+                            return null;
+                        }
+
+                        @Override
+                        public boolean matches(CharSequence charSequence, String s) {
+                            // 密码校验
+                            // return false;
+                            return true;
+                        }
+                    })
                     .tokenKeyAccess("permitAll()")
                     // 允许 /oauth/token_check端点的访问
                     .checkTokenAccess("permitAll()");

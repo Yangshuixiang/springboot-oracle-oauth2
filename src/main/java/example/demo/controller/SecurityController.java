@@ -18,8 +18,7 @@ import java.util.concurrent.TimeUnit;
 @RestController
 public class SecurityController {
     @Resource
-    private RedisTemplate<String, String> redisTemplate;
-
+    RedisTemplate<String, String> redisTemplate;
 
     @RequestMapping("/index")
     public String index() {

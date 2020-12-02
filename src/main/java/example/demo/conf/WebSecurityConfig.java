@@ -59,33 +59,33 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().ignoringAntMatchers("/oauth/authorize", "/oauth/token", "/oauth/rest_token");
 
         http.authorizeRequests()
-                .antMatchers("/code/**").permitAll()
-                .antMatchers("/antd/**", "/vue/**", "/img/**").permitAll()
-                .antMatchers("/oauth/rest_token*").permitAll()
-                .antMatchers("/doLogin").permitAll()
-                .antMatchers("/login*").permitAll()
-                .antMatchers(HttpMethod.GET, "/login*").anonymous()
-                .anyRequest().authenticated()
+            .antMatchers("/code/**").permitAll()
+            .antMatchers("/antd/**", "/vue/**", "/img/**").permitAll()
+            .antMatchers("/oauth/rest_token*").permitAll()
+            .antMatchers("/doLogin").permitAll()
+            .antMatchers("/login*").permitAll()
+            .antMatchers(HttpMethod.GET, "/login*").anonymous()
+            .anyRequest().authenticated()
             .and()
-                .formLogin()
-                .loginPage("/login")
-                .loginProcessingUrl("/doLogin")
-                .defaultSuccessUrl("/index")
-                // 登录失败异常处理
-                .failureHandler(securityLoginFailureHandler)
-                //.failureUrl("/login?error=1")
-                .usernameParameter("username")
-                .passwordParameter("password")
+            .formLogin()
+            .loginPage("/login")
+            .loginProcessingUrl("/doLogin")
+            .defaultSuccessUrl("/index")
+            // 登录失败异常处理
+            .failureHandler(securityLoginFailureHandler)
+            //.failureUrl("/login?error=1")
+            .usernameParameter("username")
+            .passwordParameter("password")
             .and()
-                .logout()
-                .logoutUrl("/logout")
-                .deleteCookies("JSESSIONID")
-                .logoutSuccessUrl("/login")
+            .logout()
+            .logoutUrl("/logout")
+            .deleteCookies("JSESSIONID")
+            .logoutSuccessUrl("/login")
             .and()
-                .exceptionHandling()
+            .exceptionHandling()
             .and()
-                //验证码过滤器
-                .addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class);
+            //验证码过滤器
+            .addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class);
 
         http.authenticationProvider(authenticationProvider());
     }
