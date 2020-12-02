@@ -14,6 +14,7 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configurers.ExpressionUrlAuthorizationConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
@@ -29,6 +30,7 @@ import org.springframework.security.oauth2.provider.approval.UserApprovalHandler
 import org.springframework.security.oauth2.provider.request.DefaultOAuth2RequestFactory;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
+import org.springframework.util.DigestUtils;
 
 /**
  * Oauth授权服务器配置，Oauth资源服务器配置
@@ -52,6 +54,8 @@ public class OAuth2ServerConfig {
         private OauthExceptionEntryPoint oauthExceptionEntryPoint;
         @Autowired
         private OauthAccessDeniedHandler oauthAccessDeniedHandler;
+//        @Autowired
+//        FilterIgnorePropertiesConfig ignorePropertiesConfig;
 
         @Override
         public void configure(ResourceServerSecurityConfigurer resources) {
@@ -64,17 +68,41 @@ public class OAuth2ServerConfig {
                     .accessDeniedHandler(oauthAccessDeniedHandler);
         }
 
+//        @Override
+//        public void configure(HttpSecurity http) throws Exception {
+//            http
+//                // STATELESS表示一定要携带access_token才能访问，无法通过session访问
+//                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+//            .and()
+//                .requestMatchers().antMatchers("/get/**")
+//            .and()
+//                .authorizeRequests()
+//                .antMatchers("/get/**").access("#oauth2.hasScope('read')");
+//        }
+
         @Override
         public void configure(HttpSecurity http) throws Exception {
-            http
-                // STATELESS表示一定要携带access_token才能访问，无法通过session访问
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-            .and()
-                .requestMatchers().antMatchers("/get/**")
-            .and()
-                .authorizeRequests()
-                .antMatchers("/get/**").access("#oauth2.hasScope('read')");
+            http.csrf().disable() ;
+            http.requestMatcher(request -> {
+                String path = request.getServletPath() ;
+                if (path != null && path.startsWith("/note") || path.startsWith("/get")) {
+                    return true ;
+                }
+                return false ;
+            })
+                    .authorizeRequests()
+                    .anyRequest()
+                    .authenticated() ;
+
+//            ExpressionUrlAuthorizationConfigurer<HttpSecurity>
+//                    .ExpressionInterceptUrlRegistry registry = http
+//                    .authorizeRequests();
+//            ignorePropertiesConfig.getUrls()
+//                    .forEach(url -> registry.antMatchers(url).permitAll());
+//            registry.anyRequest().authenticated()
+//                    .and().csrf().disable();
         }
+
     }
 
     /**
@@ -193,6 +221,8 @@ public class OAuth2ServerConfig {
                         @Override
                         public String encode(CharSequence charSequence) {
                             // 密码加密
+                            //System.out.println(charSequence.toString());
+                            //return DigestUtils.md5DigestAsHex(charSequence.toString().getBytes());
                             return null;
                         }
 
@@ -200,6 +230,9 @@ public class OAuth2ServerConfig {
                         public boolean matches(CharSequence charSequence, String s) {
                             // 密码校验
                             // return false;
+                            //String encode = DigestUtils.md5DigestAsHex(charSequence.toString().getBytes());
+                            //boolean res = s.equals( encode );
+                            //return res;
                             return true;
                         }
                     })
