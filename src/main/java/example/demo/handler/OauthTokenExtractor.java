@@ -1,6 +1,7 @@
 package example.demo.handler;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
@@ -19,9 +20,12 @@ import java.util.Enumeration;
  * @author alex
  * @date 2020/07/23
  */
-@Slf4j
+//@Slf4j
 @Component
 public class OauthTokenExtractor implements TokenExtractor {
+
+    private Logger log = LoggerFactory.getLogger(OauthTokenExtractor.class);
+
     @Override
     public Authentication extract(HttpServletRequest request) {
         String tokenValue = this.extractToken(request);

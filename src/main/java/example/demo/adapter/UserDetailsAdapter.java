@@ -18,7 +18,7 @@ import java.util.List;
  * @author alex
  * @date 2020/07/23
  */
-@Setter
+//@Setter
 public class UserDetailsAdapter implements UserDetails {
 
     // fastJson反序列化的时候需要有属性去接受redis中的属性值
@@ -54,6 +54,30 @@ public class UserDetailsAdapter implements UserDetails {
         }
         this.authorities = list;
         this.enable = (oauthUser.getDelFlag() == 0 && oauthUser.getStatus() == 0);
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setAuthorities(List<GrantedAuthority> authorities) {
+        this.authorities = authorities;
+    }
+
+    public boolean isEnable() {
+        return enable;
+    }
+
+    public void setEnable(boolean enable) {
+        this.enable = enable;
+    }
+
+    public static String getDefaultRolePrefix() {
+        return defaultRolePrefix;
     }
 
     @Override

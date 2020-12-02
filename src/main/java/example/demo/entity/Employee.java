@@ -17,40 +17,41 @@ import java.util.List;
  * @Email: shuixiang.yang@tcl.com
  */
 
-@Data
-@ToString
+//@Data
+//@ToString
 @TableName("employee")
-@EqualsAndHashCode(callSuper = false)
-@Accessors(chain = true)
+//@EqualsAndHashCode(callSuper = false)
+//@Accessors(chain = true)
 public class Employee {
 
     @TableId(value = "emp_no", type = IdType.INPUT)
     private Integer EMPNO;   //员工号
-    private String  ENAME;   //员工名
-    private String  JOB;     //工种
+    private String ENAME;   //员工名
+    private String JOB;     //工种
     private Integer MGR;     //上级
     private Date HIREDATE;//入职日期
-    private double  SAL;     //工资
-    private double  COMM;    //奖金
+    private double SAL;     //工资
+    private double COMM;    //奖金
     private Integer DEPTNO;  //部门号
 
 
-    public String toString()
-    {
-        String info = String.format("EMPNO[%d], ENAME[%s], JOB[%s], MGR[%d], HIREDATE[%tF], SAL[%.2f], COMM[%.2f], DEPTNO[%d]", EMPNO, ENAME,JOB,MGR,HIREDATE,SAL,COMM,DEPTNO);
+    public String toString() {
+        String info = String.format("EMPNO[%d], ENAME[%s], JOB[%s], MGR[%d], HIREDATE[%tF], SAL[%.2f], COMM[%.2f], " +
+                "DEPTNO[%d]", EMPNO, ENAME, JOB, MGR, HIREDATE, SAL, COMM, DEPTNO);
         return info;
     }
 
-    public static void Print(List<Employee> empList)
-    {
+    public static void Print(List<Employee> empList) {
         int count = empList.size();
         String format = String.format("Employee[%%%dd]: %%s", String.valueOf(count).length());
-        String info = String.format("%5s, %7s, %10s, %4s, %10s, %7s, %7s, %s","EMPNO", "ENAME","JOB","MGR","HIREDATE","SAL","COMM","DEPTNO");
-        System.out.println(String.format(format, count,info));
-        for(int i=0;i<count;i++){
+        String info = String.format("%5s, %7s, %10s, %4s, %10s, %7s, %7s, %s", "EMPNO", "ENAME", "JOB", "MGR",
+                "HIREDATE", "SAL", "COMM", "DEPTNO");
+        System.out.println(String.format(format, count, info));
+        for (int i = 0; i < count; i++) {
             Employee emp = empList.get(i);
-            info = String.format("%5d, %7s, %10s, %4d, %tF, %7.2f, %7.2f, %d", emp.EMPNO, emp.ENAME,emp.JOB,emp.MGR,emp.HIREDATE,emp.SAL,emp.COMM,emp.DEPTNO);
-            System.out.println(String.format(format, i,info));
+            info = String.format("%5d, %7s, %10s, %4d, %tF, %7.2f, %7.2f, %d", emp.EMPNO, emp.ENAME, emp.JOB, emp.MGR
+                    , emp.HIREDATE, emp.SAL, emp.COMM, emp.DEPTNO);
+            System.out.println(String.format(format, i, info));
         }
         return;
     }
@@ -118,5 +119,6 @@ public class Employee {
     public void setDEPTNO(Integer dEPTNO) {
         DEPTNO = dEPTNO;
     }
+
 
 }

@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @author alex
  * @date 2020/08/11
  */
-@Data
+//@Data
 @TableName("oauth_user_role")
 public class OauthUserRole implements Serializable {
     private static final long serialVersionUID = 2489654110281415444L;
@@ -19,4 +19,37 @@ public class OauthUserRole implements Serializable {
     private Long id;
     private Long userId;
     private Long roleId;
+
+    @Override
+    public String toString() {
+        return "OauthUserRole{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", roleId=" + roleId +
+                '}';
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public Long getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(Long roleId) {
+        this.roleId = roleId;
+    }
 }
