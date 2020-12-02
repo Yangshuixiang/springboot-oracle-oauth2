@@ -7,8 +7,6 @@ import java.util.List;
 
 /**
  * 数据格式转化类
- * 
- *
  */
 public class ConvertUtil {
 	/**

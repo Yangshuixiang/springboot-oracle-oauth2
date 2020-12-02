@@ -18,10 +18,6 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * @author alex
- * @date 2020/07/29
- */
 public class OAuth2AuthenticationSerializer implements ObjectDeserializer {
     @Override
     public <T> T deserialze(DefaultJSONParser parser, Type type, Object fieldName) {

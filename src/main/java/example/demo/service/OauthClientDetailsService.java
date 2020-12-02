@@ -17,8 +17,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 第三方接入应用service层
- * @author alex
- * @date 2020/07/22
  */
 @Slf4j
 @Service("oauthClientDetailsService")

@@ -7,10 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-/**
- * @author alex
- * @date 2020/07/21
- */
 public class ResultUtil {
     /**
      * 将json输出到前端(参数非json格式)

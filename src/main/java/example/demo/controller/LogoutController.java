@@ -9,11 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-/**
- * @author alex
- * @date 2020/07/31
- */
-
 @RestController
 public class LogoutController {
 

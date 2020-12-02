@@ -9,8 +9,6 @@ import org.springframework.stereotype.Component;
 
 /**
  * oauth认证失败返回结果处理
- * @author alex
- * @date 2020/07/23
  */
 @Component
 public class OauthWebResponseExceptionTranslator implements WebResponseExceptionTranslator<OAuth2Exception> {

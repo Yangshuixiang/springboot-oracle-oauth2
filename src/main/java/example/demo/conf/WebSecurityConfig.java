@@ -21,10 +21,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 /**
  * Spring Security 认证配置类
- * @author alex
- * @date 2020/07/21
  */
-@Slf4j
+//@Slf4j
 @Configuration
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {

@@ -11,37 +11,33 @@ import javax.annotation.Resource;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author alex
- * @date 2020/07/17
- */
+
 @RestController
 public class SecurityController {
     @Resource
     RedisTemplate<String, String> redisTemplate;
 
-    @RequestMapping("/index")
-    public String index() {
-        return "index";
-    }
-
-    @RequestMapping("/login")
-    public String login() {
-        return "login";
-    }
-
-    @RequestMapping("oauthTest")
-    public String oauthTest() {
-        return "oauthTest";
-    }
-
-    @RequestMapping("resourceTest")
-    public String resourceTest() {
-        return "resourceTest";
-    }
+//    @RequestMapping("/index")
+//    public String index() {
+//        return "index";
+//    }
+//
+//    @RequestMapping("/login")
+//    public String login() {
+//        return "login";
+//    }
+//
+//    @RequestMapping("oauthTest")
+//    public String oauthTest() {
+//        return "oauthTest";
+//    }
+//
+//    @RequestMapping("resourceTest")
+//    public String resourceTest() {
+//        return "resourceTest";
+//    }
 
     @GetMapping("/code/{key}")
-    @ResponseBody
     public Result getCode(@PathVariable String key) {
         String code = RandomUtils.randomGen(4);
         String lowerCaseCode = code.toLowerCase();

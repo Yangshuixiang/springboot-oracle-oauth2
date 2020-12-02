@@ -16,9 +16,6 @@ import java.util.Enumeration;
 /**
  * oauth资源服务器的token提取器，用于获取请求中的access_token
  * 如果没有什么特殊要求可以直接使用 {@link org.springframework.security.oauth2.provider.authentication.BearerTokenExtractor}
- *
- * @author alex
- * @date 2020/07/23
  */
 //@Slf4j
 @Component

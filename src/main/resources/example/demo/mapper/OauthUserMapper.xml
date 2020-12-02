@@ -4,8 +4,8 @@
 
 
     <select id="getUserByAccount" resultMap="OauthUserMap">
-        select a.id,a.account,a.user_name,a.password,a.phone,a.gender,a.status,a.del_flag,
-          c.id as 'roleId',c.role_code,c.role_name
+        select a.id,a.account,a.user_name,a.password,a.phone,
+                a.gender,a.status,a.del_flag,c.id as roleId,c.role_code,c.role_name
         from oauth_user a
         left join oauth_user_role b on a.id=b.user_id
         left join oauth_role c on b.role_id=c.id

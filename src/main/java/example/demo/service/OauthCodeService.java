@@ -14,8 +14,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 授权码模式的code处理，使用redis存储
- * @author alex
- * @date 2020/07/23
  */
 @Service
 public class OauthCodeService implements AuthorizationCodeServices {

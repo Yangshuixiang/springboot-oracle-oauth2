@@ -19,8 +19,6 @@ import org.springframework.security.web.authentication.preauth.PreAuthenticatedA
 
 /**
  * fastjson redis存储json格式序列化反序列化工具类
- * @author alex
- * @date 2020/07/29
  */
 public class FastJsonRedisTokenStoreSerializationStrategy implements RedisTokenStoreSerializationStrategy {
 

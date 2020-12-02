@@ -13,10 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * @author alex
- * @date 2020/08/11
- */
 @RestController
 @SessionAttributes("authorizationRequest")
 public class ApprovalController {

@@ -9,8 +9,6 @@ import java.lang.reflect.Type;
 
 /**
  * 自定义默认的刷新token序列化工具类
- * @author alex
- * @date 2020/07/29
  */
 public class DefaultOauth2RefreshTokenSerializer implements ObjectDeserializer {
     @Override

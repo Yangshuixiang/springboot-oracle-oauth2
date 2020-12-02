@@ -32,8 +32,6 @@ import org.springframework.security.oauth2.provider.token.store.redis.RedisToken
 
 /**
  * Oauth授权服务器配置，Oauth资源服务器配置
- * @author alex
- * @date 2020/07/21
  */
 @Slf4j
 @Configuration
@@ -124,22 +122,19 @@ public class OAuth2ServerConfig {
     @EnableAuthorizationServer
     protected class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
         @Autowired
-        private TokenStore tokenStore;
-
+        TokenStore tokenStore;
         @Autowired
-        private OauthClientDetailsService oauthClientDetailsService;
-
+        OauthClientDetailsService oauthClientDetailsService;
         @Autowired
-        private OauthCodeService authorizationCodeServices;
-
+        OauthCodeService authorizationCodeServices;
         @Autowired
-        private OauthUserDetailService userDetailService;
-
+        OauthUserDetailService userDetailService;
         @Autowired
         @Qualifier("authenticationManagerBean")
-        private AuthenticationManager authenticationManager;
+        AuthenticationManager authenticationManager;
         @Autowired
-        private OauthWebResponseExceptionTranslator oauthWebResponseExceptionTranslator;
+        OauthWebResponseExceptionTranslator oauthWebResponseExceptionTranslator;
+
 
         @Override
         public void configure(ClientDetailsServiceConfigurer clients) throws Exception {

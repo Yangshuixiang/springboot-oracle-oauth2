@@ -13,10 +13,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import javax.annotation.Resource;
 
-/**
- * @author alex
- * @date 2020/07/29
- */
 @Configuration
 public class RedisConfig {
     @Resource

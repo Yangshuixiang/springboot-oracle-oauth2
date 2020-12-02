@@ -2,10 +2,6 @@ package example.demo.utils;
 
 import java.util.Random;
 
-/**
- * @author alex
- * @date 2020/08/10
- */
 public class RandomUtils {
     /**
      * 随机数

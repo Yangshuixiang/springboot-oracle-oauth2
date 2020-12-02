@@ -20,15 +20,13 @@ import java.io.IOException;
 
 /**
  * Spring Security登录验证码拦截处理
- * @author alex
- * @date 2020/08/10
  */
 @Component
 public class ValidateCodeFilter extends OncePerRequestFilter {
     @Autowired
-    private SecurityLoginFailureHandler securityLoginFailureHandler;
+    SecurityLoginFailureHandler securityLoginFailureHandler;
     @Resource
-    private RedisTemplate<String, String> redisTemplate;
+    RedisTemplate<String, String> redisTemplate;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {

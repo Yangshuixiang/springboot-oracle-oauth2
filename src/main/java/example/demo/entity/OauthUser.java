@@ -11,13 +11,12 @@ import java.util.List;
 
 /**
  * oauth统一认证用户
- * @author alex
- * @date 2020/08/11
  */
 //@Data
 @TableName("oauth_user")
 public class OauthUser implements Serializable {
-    private static final long serialVersionUID = -3693279689434442688L;
+
+    private static final long serialVersionUID = 1L;
     @TableId
     private Long id;
     /**

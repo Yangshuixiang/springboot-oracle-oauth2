@@ -24,7 +24,6 @@ import java.util.stream.Collectors;
 @Service
 public class OauthUserDetailService extends ServiceImpl<OauthUserMapper, OauthUser> implements UserDetailsService, Serializable {
 
-    private static final long serialVersionUID = 1170885289644276974L;
     @Resource
     OauthUserMapper mapper;
 

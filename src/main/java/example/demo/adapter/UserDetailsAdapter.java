@@ -15,8 +15,6 @@ import java.util.List;
 /**
  * 使用了对象适配器模式
  * OauthUser数据库实体对象 到 Security Oauth2提供的UserDetails的对象适配器
- * @author alex
- * @date 2020/07/23
  */
 //@Setter
 public class UserDetailsAdapter implements UserDetails {

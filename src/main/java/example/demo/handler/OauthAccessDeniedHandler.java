@@ -11,10 +11,6 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * @author alex
- * @date 2020/07/23
- */
 @Component
 public class OauthAccessDeniedHandler implements AccessDeniedHandler {
     @Override

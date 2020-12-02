@@ -10,10 +10,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @author alex
- * @date 2020/07/21
- */
 @RestController
 @RequestMapping("/get/")
 public class GetController {

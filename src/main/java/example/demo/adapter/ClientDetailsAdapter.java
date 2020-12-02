@@ -11,8 +11,6 @@ import java.util.*;
 /**
  * 使用了对象适配器模式
  * OauthClientDetails数据库实体对象 到 Security Oauth2提供的ClientDetails的对象适配器
- * @author alex
- * @date 2020/07/23
  */
 public class ClientDetailsAdapter implements ClientDetails {
 

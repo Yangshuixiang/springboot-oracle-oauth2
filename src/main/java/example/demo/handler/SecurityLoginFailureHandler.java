@@ -12,8 +12,6 @@ import java.io.IOException;
 
 /**
  * Security登录失败处理器
- * @author alex
- * @date 2020/08/10
  */
 @Component
 public class SecurityLoginFailureHandler implements AuthenticationFailureHandler {

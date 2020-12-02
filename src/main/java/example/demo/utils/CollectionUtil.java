@@ -5,10 +5,6 @@ import org.springframework.util.StringUtils;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author alex
- * @date 2020/07/23
- */
 public class CollectionUtil {
 
     private static final String SEPARATOR_COMMA = ",";

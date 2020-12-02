@@ -11,8 +11,6 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 /**
  * 对oauth接口成功返回的结果进行封装，保证结果格式的一致性
- * @author alex
- * @date 2020/07/30
  */
 @ControllerAdvice(basePackages = "org.springframework.security.oauth2.provider.endpoint")
 public class ResponseAdvice implements ResponseBodyAdvice {

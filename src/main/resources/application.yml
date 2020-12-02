@@ -43,7 +43,7 @@ spring:
   mvc:
     static-path-pattern: /**
   resource:
-    static-locations: classpath:/static/,classpath:/public/,classpath:templates
+    static-locations: classpath:/static/,classpath:/public/,classpath:/templates/
 #mybatis+配置
 mybatis-plus:
   mapper-locations: classpath*:example/demo/mapper/*Mapper.xml

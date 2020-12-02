@@ -11,13 +11,10 @@ import lombok.Data;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-/**
- * @author alex
- * @date 2020/07/21
- */
 @TableName("oauth_client_details")
 //@Data
 public class OauthClientDetails implements Serializable {
+
     @TableId
     private String id;
     /**

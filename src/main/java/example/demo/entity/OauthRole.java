@@ -9,13 +9,12 @@ import java.time.LocalDateTime;
 
 /**
  * oauth统一认证角色
- * @author alex
- * @date 2020/08/11
  */
 //@Data
 @TableName("oauth_role")
 public class OauthRole implements Serializable {
-    private static final long serialVersionUID = 1275468202514560808L;
+
+    private static final long serialVersionUID = 1L;
     @TableId
     private Long id;
     /**

@@ -3,13 +3,10 @@ package example.demo.entity;
 import java.io.Serializable;
 import java.util.Arrays;
 
-/**
- * @author alex
- * @date 2020/07/23
- */
 //@Data
 public class OauthCode implements Serializable {
-    private static final long serialVersionUID = -1326285297837903604L;
+
+    private static final long serialVersionUID = 1L;
 
     private String code;
     private byte[] authentication;

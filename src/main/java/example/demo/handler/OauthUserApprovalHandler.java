@@ -10,8 +10,6 @@ import org.springframework.security.oauth2.provider.approval.TokenStoreUserAppro
 
 /**
  * 重写当对于需要询问是否授权第三方应用时的方法，增加受信任的第三方处理
- * @author alex
- * @date 2020/07/21
  */
 @Slf4j
 public class OauthUserApprovalHandler extends TokenStoreUserApprovalHandler {
